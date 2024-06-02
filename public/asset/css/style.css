@@ -1,0 +1,357 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif; /* Terapkan font Montserrat */
+    background-color: white;
+}
+header {
+    position: relative;
+    background-image: url('../image/background2.png'); /* Ganti dengan URL gambar background Anda */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Pastikan tinggi mengisi seluruh viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 30%, rgba(255, 255, 255, 1) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.top-right-button {
+    position: absolute;
+    margin-top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.centered-div {
+    
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0) 100%); /* Gradien hitam pekat ke transparan */
+    z-index: 2; /* Supaya navbar tetap di atas gradient */
+}
+.navbar img.logo {
+    height: 50px;
+    margin-left: 50px;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.navbar ul li {
+    margin-left: 20px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.header-content img {
+    width: 800px; /* Ukuran gambar di tengah header */
+    height: auto;
+    z-index: 2; /* Supaya gambar di atas gradient */
+    position: relative; /* Menjaga agar gambar tetap di atas gradient */
+}
+.about-section {
+    padding: 50px 0;
+    background-color: #f8f8f8; /* Background untuk kontras */
+}
+.about-section .content {
+    font-size: 12pt;
+    margin-right: 50px;
+}
+.carousel-item img {
+    margin-top: 20px;
+    max-width: 250px;
+    /* max-height: 400px; */
+}
+.menu-heading {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #FBAB61;
+    margin-bottom: 0px;
+}
+.sub-heading {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin: -20px 0;
+    color: #000347;
+    margin-bottom: 40px;
+}
+.testimonial-section {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #fff;
+}
+.testimonial {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 14pt;
+    margin-bottom: 150px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+.footer-content p {
+    margin: 10px 0;
+}
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+.social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    padding: 20px;
+    text-decoration: none;
+    color:#FBAB61;
+}
+
+.social-media .instagram {
+    background-color: #000347;
+}
+.social-media .whatsapp {
+    background-color: #000347;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #000347;
+    color: white;
+    margin-top: 120px;
+    padding-top: 30px;
+    padding-left: 75%;
+    padding-bottom: 30px;
+}
+.contact-header {
+    margin-top: 20px;
+    font-weight: 600;
+}
+.contact-content {
+    margin-top: -10px;
+}
+.desc-product {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.desc-product .product-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #FBAB61;
+}
+.desc-product .product-desc {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+.desc-product .product-price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #000347;
+}
+
+.button-order {
+    background-color: #FBAB61; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    font-size: 1em; /* Ukuran font */
+    font-weight: 700; /* Ketebalan font */
+    padding: 15px 30px; /* Padding di sekitar teks tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 25px; /* Membuat sudut tombol melengkung */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan shadow box */
+    transition: background-color 0.3s, transform 0.3s; /* Animasi transisi untuk hover efek */
+    text-decoration: none;
+}
+.button-check {
+    margin-top: 20px;
+    margin-left: 5px;
+    float: left;
+    background-color: #6ed66e; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    font-size: 1em; /* Ukuran font */
+    font-weight: 700; /* Ketebalan font */
+    padding: 15px 30px; /* Padding di sekitar teks tombol */
+    border: none; /* Menghapus border default */
+    border-radius: 25px; /* Membuat sudut tombol melengkung */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan shadow box */
+    transition: background-color 0.3s, transform 0.3s; /* Animasi transisi untuk hover efek */
+    text-decoration: none;
+}
+.button-check:hover {
+    background-color: #37c937; /* Warna latar belakang tombol saat hover */
+    transform: translateY(-2px); /* Mengangkat tombol sedikit saat hover */
+    text-decoration: none;
+    color: white;
+}
+.button-check:active {
+    background-color: #d18845; /* Warna latar belakang tombol saat ditekan */
+    transform: translateY(0); /* Mengembalikan posisi tombol saat ditekan */
+    text-decoration: none;
+}
+.button-order:hover {
+    background-color: #e39a50; /* Warna latar belakang tombol saat hover */
+    transform: translateY(-2px); /* Mengangkat tombol sedikit saat hover */
+    text-decoration: none;
+    color: white;
+}
+.button-order:active {
+    background-color: #d18845; /* Warna latar belakang tombol saat ditekan */
+    transform: translateY(0); /* Mengembalikan posisi tombol saat ditekan */
+    text-decoration: none;
+}
+
+/* Pesanan */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+}
+
+.menu-image {
+    border-radius: 5px;
+}
+
+.menu-details {
+    margin-top: 10px;
+}
+
+.menu-quantity {
+    margin-top: 10px;
+}
+
+/* style.css */
+/* Gaya untuk tombol "Calculate Total" */
+#calculateTotal {
+    padding: 10px 20px;
+    background-color: #28a745; /* Warna hijau */
+    color: #fff; /* Warna teks putih */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Jarak bawah */
+}
+
+#calculateTotal:hover {
+    background-color: #218838; /* Warna hijau yang sedikit lebih gelap saat hover */
+}
+
+/* Gaya untuk kotak keranjang */
+#cart {
+    /* background-color: #f8f9fa;  */
+    /* border: 1px solid #dee2e6;  */
+    border-radius: 5px; /* Sudut melengkung */
+    padding: 20px; /* Ruang dalam kotak */
+    margin-bottom: 20px; /* Jarak bawah */
+}
+
+/* Gaya untuk jumlah total */
+#totalAmount {
+    font-weight: bold; /* Teks lebih tebal */
+    color: #007bff; /* Warna biru */
+}
+
+/* Gaya untuk tombol "Checkout" */
+#checkout {
+    padding: 10px 20px; /* Padding tombol */
+    background-color: #007bff; /* Warna biru */
+    color: #fff; /* Warna teks putih */
+    border: none; /* Tanpa garis tepi */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Ubah kursor saat mengarah ke tombol */
+}
+
+#checkout:hover {
+    background-color: #0056b3; /* Warna biru yang sedikit lebih gelap saat hover */
+}
+
+#orderForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status-box {
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    min-width: 50px;
+    font-size: 10pt;
+}
+
+.status-pending {
+    background-color: orange;
+}
+
+.status-success {
+    background-color: green;
+}
